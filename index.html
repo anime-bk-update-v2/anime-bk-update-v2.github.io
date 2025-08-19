@@ -1,1 +1,47 @@
-<html>gggghgg</html>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Shen Yin Wangzuo — ผนึกเทพบัลลังก์ราชันย์</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Shen Yin Wangzuo — ผนึกเทพบัลลังก์ราชันย์</h1>
+  </header>
+
+  <main>
+    <div id="video-title"></div>
+    <iframe id="videoIframe" allowfullscreen width="100%" height="480"></iframe>
+
+    <div class="nav-buttons">
+      <a id="prevEp">ก่อนหน้า</a>
+      <a href="index.html">ทั้งหมด</a>
+      <a id="nextEp">ถัดไป</a>
+    </div>
+  </main>
+
+  <script src="episodes.js"></script>
+  <script>
+    // ดึง ep จาก URL เช่น index.html?ep=95
+    let params = new URLSearchParams(window.location.search);
+    let ep = parseInt(params.get("ep")) || 94; // ค่า default = 94
+
+    // ตั้งค่า iframe
+    const video = document.getElementById("videoIframe");
+    const title = document.getElementById("video-title");
+
+    if (episodes[ep]) {
+      video.src = episodes[ep];
+      title.textContent = "ตอนที่ " + ep + " ซับไทย";
+    } else {
+      title.textContent = "ไม่พบตอนนี้";
+    }
+
+    // ปุ่มก่อนหน้า / ถัดไป
+    document.getElementById("prevEp").href = "index.html?ep=" + (ep - 1);
+    document.getElementById("nextEp").href = "index.html?ep=" + (ep + 1);
+  </script>
+</body>
+</html>
