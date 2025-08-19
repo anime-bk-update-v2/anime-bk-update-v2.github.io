@@ -1,6 +1,6 @@
 // episodes.js
 const episodes = {
-  94: "https://cdn.anime-bk.com/videos/ep94.mp4",
-  95: "https://cdn.anime-bk.com/videos/ep95.mp4",
-  96: "https://cdn.anime-bk.com/videos/ep96.mp4"
+  94: "aHR0cHM6Ly9tb2ppLnRlYW0taW5keS5uZXQvZW1iZWQvd2VxOUJRMnpLSC8=",
+  95: "aHR0cHM6Ly9jZG4uYW5pbWUtYmsuY29tL3ZpZGVvcy9lcDk1Lm1wNA==",
+  96: "aHR0cHM6Ly9tb2ppLnRlYW0taW5keS5uZXQvZW1iZWQvd2VxOUJRMnpLSC8="
 };
